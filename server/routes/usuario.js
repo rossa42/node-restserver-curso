@@ -1,7 +1,7 @@
+const bcrypt = require('bcryptjs');
 const express = require('express');
 const Usuario = require('../models/usuario');
 const app = express();
-const bcrypt = require('bcryptjs');
 const _ = require('underscore');
 
 app.get('/usuario', function(req, res) {

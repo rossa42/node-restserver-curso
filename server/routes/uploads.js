@@ -71,9 +71,7 @@ app.put('/upload/:tipo/:id', function(req, res) {
 
         if (tipo === 'usuarios') {
             imagenUsuario(id, res, nombreArchivo);
-        }
-
-        if (tipo === 'productos') {
+        } else {
             imagenProducto(id, res, nombreArchivo);
         }
         /*

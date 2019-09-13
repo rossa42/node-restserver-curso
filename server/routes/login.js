@@ -89,7 +89,6 @@ app.post('/google', async(req, res) => {
         });
 
 
-    console.log(googleUser.email);
     if (googleUser.email != undefined) {
         Usuario.findOne({ email: googleUser.email }, (err, usuarioDB) => {
             if (err) {

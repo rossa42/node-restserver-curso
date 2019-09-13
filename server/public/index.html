@@ -12,20 +12,23 @@
 </head>
 
 <body>
+
+    <img src="http://localhost:3000/imagen/productos/5d7a7cb6d87f77528056ab56-690.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJnb29nbGUiOmZhbHNlLCJfaWQiOiI1ZDc2YTdiNGJhNWQwOTgxOTk1NWFkMWUiLCJub21icmUiOiJUZXN0IDExIiwiZW1haWwiOiJ0ZXN0MTFAZ21haWwuY29tIiwiX192IjowLCJpbWciOiI1ZDc2YTdiNGJhNWQwOTgxOTk1NWFkMWUtNzU1LnBuZyJ9LCJpYXQiOjE1NjgzOTM0OTYsImV4cCI6MTU2ODM5NjA4OH0.JxK5-1J1MuEDe03XsKkAvnv2FjQuVEoXbj62z89zm78
+    ">
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
 
     <script>
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
-            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log(' ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
             console.log('Name: ' + profile.getName());
             console.log('Image URL: ' + profile.getImageUrl());
-            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email ' scope is not present.
             var id_token = googleUser.getAuthResponse().id_token;
             console.log("token" + id_token);
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/google');
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.open('POST ', '/google ');
+            xhr.setRequestHeader('Content-Type ', 'application/x-www-form-urlencoded ');
             xhr.onload = function() {
                 console.log('Signed in as: ' + xhr.responseText);
             };
@@ -39,7 +42,7 @@
         function signOut() {
             var auth2 = gapi.auth2.getAuthInstance();
             auth2.signOut().then(function() {
-                console.log('User signed out.');
+                console.log(' User signed out. ');
             });
         }
     </script>
